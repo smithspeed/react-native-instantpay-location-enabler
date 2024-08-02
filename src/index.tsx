@@ -17,6 +17,19 @@ const InstantpayLocationEnabler = NativeModules.InstantpayLocationEnabler
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return InstantpayLocationEnabler.multiply(a, b);
+const RNLocationEnabler = (Platform.OS === "ios") ? null : {
+
+    checkLocation: (options={}) => {
+
+        let params = null;
+
+        if(Object.keys(options).length > 0){
+            params = JSON.stringify(options);
+        }
+
+        return InstantpayLocationEnabler.checkLocation(params);
+    }
 }
+
+
+export default RNLocationEnabler;

@@ -1,6 +1,6 @@
 {
   "name": "react-native-instantpay-location-enabler",
-  "version": "0.1.0",
+  "version": "1.0.2",
   "description": "React Native App to ensure that the Android device's system settings are properly configured for the app's location needs.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -43,7 +43,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "location",
+    "gps",
+    "Instantpay",
+    "ipay",
+    "fetch location"
   ],
   "repository": {
     "type": "git",
